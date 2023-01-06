@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <style>
+        button {
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+
+
+        }
+
+        iframe {
+
+            border-radius: 10px;
+
+        }
+
+        input {
+            width: 600px;
+            height: 45px;
+            border-radius: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+ 
+    </style>
+
+
+</head>
+
+<body>
+    <span>
+        <br>
+        <img align="left" src="./Capture.PNG" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="search" placeholder="Search">
+        <img width="25" height="25px"
+            src="data:image/png;base64,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"
+            alt="">  
+        <img align="right" src="./2.PNG" alt=""><br><br>
+        <img align="left" src="./3.PNG" alt="">
+
+        <button>Pakistani Drama</button>
+        <button>Cricket </button>
+        <button>Bollywood Song </button>
+        <button>Gaming</button>
+        <button>Nusrat Fateh Ali Khan</button>
+        <button>MrBeast</button>
+        <button>Gaming</button>
+        <button>Fornite</button>
+        <button>PUBG</button>
+        <button>Cooking Shows</button>
+        <button>Cricket Tournament</button>
+        <button>Fifa World Cup </button>
+        <button>Sufiyan</button>
+        <button>Music</button>
+        <button>Marvel</button>
+        <button>Pakistan Cricket Team</button>
+        <button>Sufiyan</button>
+        <button>Recenty</button>
+        <BR></BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/kx2hn_PMzmk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe> &nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/GkX3rm00aI4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/UnsFmioY7A4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/5LfGk_bLLpE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+
+        <br><br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/aKAZkC4pWSU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/69d857kqgEM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/-o8MFNDGqwA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/7IKab3HcfFk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+
+        <br><br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/1ICHsWjjhrE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/PLDFgKzWy3o" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/gi-G-QpN7IQ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/jdMNoQE3mIQ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <br><br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/U6ptMpg9ffc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/a4uwm5K46Rg" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/drO2q_tx8Jg" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+        <iframe width="375" height="215" src="https://www.youtube.com/embed/sazORF0lomE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
